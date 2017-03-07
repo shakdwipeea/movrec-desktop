@@ -16,7 +16,8 @@
     [:p.control.is-expanded
       [:input.input {:placeholder "Search your wish!"}]]
     [:p.control
-      [:a.button.is-info "Search"]]])
+      [:a.button.is-info
+        {:on-click #(rf/dispatch [:search-movie])} "Search"]]])
 
 (defn root-component []
   [:div.container.is-fluid
